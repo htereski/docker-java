@@ -27,7 +27,6 @@ RUN --mount=type=bind,source=pom.xml,target=pom.xml \
     --mount=type=cache,target=/root/.m2 \
     ./mvnw dependency:go-offline -DskipTests
 
-################################################################################
 
 # Create a stage for building the application based on the stage with downloaded dependencies.
 # This Dockerfile is optimized for Java applications that output an uber jar, which includes
